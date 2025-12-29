@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 import { IoLogoChrome } from "react-icons/io";
-import logo from  "../images/logo.png"
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
