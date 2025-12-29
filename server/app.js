@@ -11,20 +11,20 @@ const cookieParser = require("cookie-parser");
 //connect database
 connectDB();
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     credentials: true,
-//   })
-// );
 app.use(
   cors({
-    origin: function (origin, callback) {
-      callback(null, true); // allow all origins
-    },
+    origin: "https://userhub-pavanlohith.netlify.app/",
     credentials: true,
   })
 );
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       callback(null, true); // allow all origins
+//     },
+//     credentials: true,
+//   })
+// );
 
 app.use(cookieParser());
 
