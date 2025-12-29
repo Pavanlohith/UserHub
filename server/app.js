@@ -122,7 +122,7 @@ app.get('/getdata',authenticate,(req,res)=>{
 app.get("/logout", (req, res) => {
   res.clearCookie("jwt", {
     httpOnly: true,
-    sameSite: "lax",
+    sameSite: "none",
   });
 
   res.status(200).json({ message: "User logged out successfully" });
