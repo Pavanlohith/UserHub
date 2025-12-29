@@ -9,9 +9,14 @@ import Signup from './components/signup';
 import { Routes, Route } from "react-router-dom";
 import Error404 from './components/Errmsg';
 import Logout from './components/Logout';
+import { useContext,useReducer } from 'react';
+import {initialState,reducer} from './reducer/UseReducer';
+import { createContext } from 'react';
+ export const UserContext = createContext();
 function App() {
+  const [state,dispatch]= useReducer(reducer,initialState);
   return (
-    <div>
+    <UserContext.Provider value={{state,dispatch}}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +27,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
-    </div>
+    </UserContext.Provider>
   );
 }
 

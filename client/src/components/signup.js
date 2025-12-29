@@ -12,7 +12,8 @@ const Signup = () => {
     phone: "",
     work: "",
     password: "",
-    cpassword: ""
+    cpassword: "",
+    profiledescription: ""
   });
 
   const handleInputs = (event) => {
@@ -22,7 +23,7 @@ const Signup = () => {
 
   const PostData = async (event) => {
     event.preventDefault();
-    const { name, email, phone, work, password, cpassword } = user;
+    const { name, email, phone, work, password, cpassword, profiledescription } = user;
 
     try {
       const res = await fetch(`${process.env.REACT_APP_BACKEND_URI}/api/register`, {
@@ -37,6 +38,7 @@ const Signup = () => {
           work,
           password,
           cpassword,
+          profiledescription
         }),
       });
 
@@ -45,7 +47,7 @@ const Signup = () => {
 
       if (res.status === 201) {
         window.alert("Registration successful!");
-        navigate("/login"); // ✅ Works now
+        navigate("/login"); 
       } else {
         window.alert(data.error || "Invalid registration");
       }
@@ -128,6 +130,17 @@ const Signup = () => {
               value={user.cpassword}
               onChange={handleInputs}
               placeholder="Confirm Password"
+              required
+            />
+          </div>
+          <div className="form-group mb-4">
+            <input
+              type="text"
+              name="profiledescription"
+              className="underline-input"
+              value={user.profiledescription}
+              onChange={handleInputs}
+              placeholder="Profile Description"
               required
             />
           </div>

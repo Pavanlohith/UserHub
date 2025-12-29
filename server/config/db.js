@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 // Use environment variable for MongoDB URI
 
 const mongoURI = process.env.MONGO_URI ;
+console.log('MongoDB URI:', mongoURI); // Debugging line
 const connectDB = async () => {
   try {
     await mongoose.connect(mongoURI, {

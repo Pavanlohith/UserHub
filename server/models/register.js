@@ -30,6 +30,10 @@ const regischema=new mongoose.Schema({
         type:Date,
         default:Date.now
     },
+    profiledescription:{
+        type:String,
+        required:true
+    },
     messages :[
         {
             name:{

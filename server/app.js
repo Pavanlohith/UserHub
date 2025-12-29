@@ -1,4 +1,5 @@
-const dotenv = require('./.env')
+require("dotenv").config();
+
 
 
 const express=require('express')
@@ -18,8 +19,19 @@ app.use(
   cors({
     origin: "https://userhub-pavanlohith.netlify.app",
     credentials: true,
+    // methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    // allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+
+
+// app.use(
+//   cors({
+//     origin: "https://userhub-pavanlohith.netlify.app",
+//     credentials: true,
+//   })
+// );
 // app.use(
 //   cors({
 //     origin: function (origin, callback) {
@@ -32,9 +44,9 @@ app.use(
 app.use(cookieParser());
 
 app.post('/api/register', async (req, res) => {
-  const { name, email, phone, work, password, cpassword } = req.body;
+  const { name, email, phone, work, password, cpassword ,profiledescription} = req.body;
 
-  if (!name || !email || !phone || !work || !password || !cpassword) {
+  if (!name || !email || !phone || !work || !password || !cpassword || !profiledescription) {
     return res.status(422).json({ error: "Please fill all fields properly" });
   }
 
@@ -46,7 +58,7 @@ app.post('/api/register', async (req, res) => {
       return res.status(422).json({ error: "User already exists" });
     }
 
-    const newUser = new user({ name, email, phone, work, password, cpassword });
+    const newUser = new user({ name, email, phone, work, password, cpassword, profiledescription });
     await newUser.save();
 
     res.status(201).json({ message: "User registered successfully" });
