@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://userhub-pavanlohith.netlify.app/",
+    origin: "https://userhub-pavanlohith.netlify.app",
     credentials: true,
   })
 );
