@@ -77,8 +77,8 @@ app.post('/api/signin', async (req, res) => {
     res.cookie("jwt", token, {
       expires: new Date(Date.now() + 25896200000000),
       httpOnly: true,
-        sameSite: "lax",
-         secure: false,
+        sameSite: "none",
+         secure: true,
     });
 
     console.log("Login token:", token);
