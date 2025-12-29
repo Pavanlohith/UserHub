@@ -1,0 +1,74 @@
+/* Full page background */
+.error-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #cfe9ff, #eaf6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main box */
+.error-box {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 404 buggy style */
+.error-code {
+  font-size: 120px;
+  font-weight: 800;
+  color: #3b82f6;
+  letter-spacing: 8px;
+  position: relative;
+}
+
+/* glitch effect */
+.error-code::after {
+  content: "404";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  color: #ef4444;
+  opacity: 0.4;
+}
+
+/* text */
+.error-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.error-text {
+  color: #4b5563;
+  margin-bottom: 25px;
+}
+
+/* button */
+.error-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.error-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}

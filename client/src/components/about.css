@@ -1,0 +1,25 @@
+.about-container {
+  background: linear-gradient(135deg, #e8f0ff, #ffffff);
+}
+
+.about-box {
+  width: 600px;
+  max-width: 90%;
+  border-radius: 15px;
+}
+
+.about-box h2 {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #007bff !important;
+  color: white !important;
+  border-radius: 10px 10px 0 0;
+}
+
+.nav-tabs .nav-link {
+  color: #007bff;
+  font-weight: 500;
+}

@@ -1,0 +1,50 @@
+.contact-container {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+}
+
+.contact-box {
+  background: #ffffff;
+  width: 70%;
+  max-width: 900px;
+}
+
+.contact-item h5 {
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  color: #555;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    width: 90%;
+    padding: 30px 15px;
+  }
+  .contact-item {
+    margin-bottom: 20px;
+  }
+}
+.contact-page {
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+
+.contact-box {
+  background: white;
+  width: 80%;
+}
+
+.form-box {
+  width: 80%;
+}
+
+.contact-item h5 {
+  font-weight: 600;
+}
+
+.form-control {
+  border-radius: 10px;
+}

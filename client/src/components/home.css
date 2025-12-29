@@ -1,0 +1,30 @@
+.home-container {
+  background: linear-gradient(135deg, #dceefb, #f5f7fa);
+  color: #333;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.highlight {
+  color: #007bff;
+}
+
+.home-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+}
