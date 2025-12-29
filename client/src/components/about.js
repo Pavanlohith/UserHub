@@ -73,7 +73,7 @@ const callAboutPage = async () => {
           <Tab eventKey="profile" title="Profile">
             <div className="text-center mt-3">
               <p>
-                I’m Pavan Lohith, a passionate web developer skilled in building
+                {userData.name} a passionate web developer skilled in building
                 modern and responsive websites using React, Node.js, and MongoDB.
               </p>
               <p>
